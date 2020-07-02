@@ -3,7 +3,7 @@ description: 'my first action'
 author: 'Jorge Saud'
 inputs:
   myToken:              # change this
-    description: 'github token ${{ secrets.GITHUB_TOKEN }}'
+    description: 'github token'
     default: '1000'
 runs:
   using: 'node12'
