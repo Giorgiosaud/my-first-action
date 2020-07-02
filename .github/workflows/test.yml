@@ -15,12 +15,11 @@ jobs:
         yarn
         yarn all
   test: # make sure the action works on a clean machine without building
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: |
-        yarn
-        yarn all
-    - uses: ./
+    - name: Test My Action
+      uses: ./
       with: 
         milliseconds: 1000
