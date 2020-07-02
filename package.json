@@ -26,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^3.5.0",
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.2.0"
