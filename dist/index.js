@@ -459,9 +459,9 @@ exports.wait = void 0;
 function wait(milliseconds) {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise(resolve => {
-            if (isNaN(milliseconds)) {
-                throw new TypeError('milliseconds not a number');
-            }
+            // if (isNaN(milliseconds)) {
+            throw new TypeError('milliseconds not a number');
+            // }
             setTimeout(() => resolve('done!'), milliseconds);
         });
     });
