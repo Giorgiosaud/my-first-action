@@ -98,8 +98,12 @@ function run() {
             const ms = core.getInput('milliseconds');
             core.debug(`Waiting ${ms} milliseconds ...`);
             core.debug(new Date().toTimeString());
-            yield wait_1.wait(parseInt(ms, 10));
+            const result = yield core.group(`Waiting ${ms} milliseconds`, () => __awaiter(this, void 0, void 0, function* () {
+                const response = yield wait_1.wait(parseInt(ms, 10));
+                return response;
+            }));
             core.debug(new Date().toTimeString());
+            core.debug(result);
             core.setOutput('time', new Date().toTimeString());
         }
         catch (error) {
