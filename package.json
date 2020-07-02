@@ -25,6 +25,7 @@
   "author": "YourNameOrOrganization",
   "license": "MIT",
   "dependencies": {
+    "@actions/artifact": "^0.3.2",
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^3.5.0",
