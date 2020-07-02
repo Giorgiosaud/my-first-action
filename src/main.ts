@@ -13,7 +13,7 @@ async function run(): Promise<void> {
     })
     core.debug(new Date().toTimeString())
     core.debug(result)
-
+    core.info('Output to the actions build log')
     core.setOutput('time', new Date().toTimeString())
   } catch (error) {
     core.setFailed(error.message)
