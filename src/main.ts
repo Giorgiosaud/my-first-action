@@ -7,10 +7,12 @@ async function run(): Promise<void> {
     core.debug(`Waiting ${ms} milliseconds ...`)
 
     core.debug(new Date().toTimeString())
-    core.startGroup('Waiting ${ms} milliseconds')
-    await wait(parseInt(ms, 10))
-    core.endGroup()
+    const result = await core.group(`Waiting ${ms} milliseconds`, async () => {
+      const response = await wait(parseInt(ms, 10))
+      return response
+    })
     core.debug(new Date().toTimeString())
+    core.debug(result)
 
     core.setOutput('time', new Date().toTimeString())
   } catch (error) {
