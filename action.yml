@@ -1,10 +1,10 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'my first action'
+description: 'my first action'
+author: 'Jorge Saud'
 inputs:
   milliseconds:              # change this
     description: 'input description here'
-    default: 'default value if applicable'
+    default: '1000'
 runs:
   using: 'node12'
   main: 'dist/index.js'
