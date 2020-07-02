@@ -96,7 +96,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const ms = core.getInput('milliseconds');
-            core.setOutput('Waiting milliseconds', ms);
+            core.debug(`Waiting ${ms} milliseconds ...`);
             core.debug(new Date().toTimeString());
             yield wait_1.wait(parseInt(ms, 10));
             core.debug(new Date().toTimeString());
@@ -459,9 +459,9 @@ exports.wait = void 0;
 function wait(milliseconds) {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise(resolve => {
-            // if (isNaN(milliseconds)) {
-            throw new TypeError('milliseconds not a number');
-            // }
+            if (isNaN(milliseconds)) {
+                throw new TypeError('milliseconds not a number');
+            }
             setTimeout(() => resolve('done!'), milliseconds);
         });
     });
