@@ -2,8 +2,8 @@ name: 'my first action'
 description: 'my first action'
 author: 'Jorge Saud'
 inputs:
-  milliseconds:              # change this
-    description: 'input description here'
+  myToken:              # change this
+    description: 'github token ${{ secrets.GITHUB_TOKEN }}'
     default: '1000'
 runs:
   using: 'node12'
