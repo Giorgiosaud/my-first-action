@@ -7,7 +7,9 @@ async function run(): Promise<void> {
     core.debug(`Waiting ${ms} milliseconds ...`)
 
     core.debug(new Date().toTimeString())
+    core.startGroup('Waiting ${ms} milliseconds')
     await wait(parseInt(ms, 10))
+    core.endGroup()
     core.debug(new Date().toTimeString())
 
     core.setOutput('time', new Date().toTimeString())
