@@ -21,6 +21,4 @@ jobs:
     - name: Test My Action
       uses: ./
       with: 
-        milliseconds: 1000
-      env:
         myToken: ${{ secrets.GITHUB_TOKEN }}
